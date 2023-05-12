@@ -58,3 +58,10 @@ class TestPessoa:
         with api.env.adopt_roles(["Manager"]):
             content = api.content.create(container=portal, **payload)
         assert api.content.get_state(content) == "internal"
+    
+    def test_transition_editor_cannot_publish_internally(self, portal, payload):
+        with api.env.adopt_roles(["Editor"]):
+            content = api.content.create(container=portal, **payload)
+            with pytest.raises(api.exc.InvalidParameterError) as exc:
+                api.content.transition(content, "publish_internally")
+        assert api.content.get_state(content) == "internal"
