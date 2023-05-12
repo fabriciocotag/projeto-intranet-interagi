@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="intranet_interagi"
+    >
+
+  <configure zcml:condition="installed AccessControl.security">
+    <permission
+        id="intranet_interagi.pessoa.add"
+        title="intranet_interagi: Add Pessoa"
+        />
+
+  </configure>
+
+</configure>

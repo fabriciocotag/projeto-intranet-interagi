@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry>
+  <records interface="plone.base.interfaces.controlpanel.IMailSchema"
+           prefix="plone"
+  >
+    <value key="email_charset">utf-8</value>
+    <value key="smtp_host">remote.host.com</value>
+    <value key="smtp_port">27</value>
+  </records>
+</registry>
