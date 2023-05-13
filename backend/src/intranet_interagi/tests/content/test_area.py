@@ -113,7 +113,10 @@ class TestArea:
             )
         assert area.excluded_from_nav is True
 
-    def test_subscriber_modified_with_predio_value(self, portal):
+    def test_subscriber_modified(self, portal):
+        from zope.event import notify
+        from zope.lifecycleevent import ObjectModifiedEvent
+
         with api.env.adopt_roles(["Manager"]):
             area = api.content.create(
                 container=portal,
@@ -121,23 +124,27 @@ class TestArea:
                 title="Marketing",
                 description="Área de Marketing",
                 email="mktg@plone.org",
-                predio="sede",
                 ramal="2022",
             )
-            del area.predio;
+        assert area.excluded_from_nav is True
+
+        with api.env.adopt_roles(["Manager"]):
+            area.predio = "sede"
             notify(ObjectModifiedEvent(area))
+
         assert area.excluded_from_nav is False
 
-    def test_subscriber_modified_without_predio_value(self, portal):
+    def test_area_added_group_creation(self, portal):
+        from zope.event import notify
+
         with api.env.adopt_roles(["Manager"]):
             area = api.content.create(
                 container=portal,
                 type=CONTENT_TYPE,
-                title="Marketing",
-                description="Área de Marketing",
-                email="mktg@plone.org",
-                ramal="2022",
+                title="Teste area com grupo 1",
+                description="Área com grupo 1",
+                email="areanova@plone.org",
+                ramal="2023",
             )
-            area.predio = 'sede';
-            notify(ObjectModifiedEvent(area))
-        assert area.excluded_from_nav is True
+            created_group = api.group.get( api.content.get_uuid(area) + '_editors' )
+        assert created_group
