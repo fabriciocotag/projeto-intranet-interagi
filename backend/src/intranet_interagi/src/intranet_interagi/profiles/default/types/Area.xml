@@ -27,8 +27,8 @@
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">intranet_interagi.Area.add</property>
-  <property name="klass">intranet_interagi.content.Area.Area</property>
+  <property name="add_permission">intranet_interagi.area.add</property>
+  <property name="klass">intranet_interagi.content.area.Area</property>
   <property name="model_file" />
   <property name="model_source" />
   <property name="schema">intranet_interagi.content.Area.IArea</property>
