@@ -20,8 +20,7 @@
 
   <!-- Hierarchy control -->
   <property name="allowed_content_types">
-    <element value="File" />
-    <element value="Image" />
+    <element value="Area" />
   </property>
   <property name="filter_content_types">True</property>
   <property name="global_allow">True</property>
@@ -31,12 +30,13 @@
   <property name="klass">intranet_interagi.content.area.Area</property>
   <property name="model_file" />
   <property name="model_source" />
-  <property name="schema">intranet_interagi.content.Area.IArea</property>
+  <property name="schema">intranet_interagi.content.area.IArea</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors"
             purge="false"
   >
+    <element value="intranet_interagi.contact_info" />
     <element value="plone.namefromtitle" />
     <element value="plone.shortname" />
     <element value="plone.excludefromnavigation" />
@@ -91,4 +91,3 @@
   </action>
 
 </object>
-
