@@ -1,3 +1,5 @@
+from pathlib import Path
+import json
 import logging
 import requests
 
@@ -12,6 +14,9 @@ logger.setLevel(logging.INFO)
 BASE_URL="http://localhost:8080/Plone/++api++"
 USUARIO="admin"
 SENHA="admin"
+
+PASTA_ATUAL = Path(__file__).parent.resolve()
+PASTA_DADOS = PASTA_ATUAL / "data"
 
 arquivo_dados = PASTA_DADOS / "popular.json"
 with open(arquivo_dados, "r") as fh:

@@ -58,5 +58,50 @@
         import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>
+  
+  <genericsetup:upgradeSteps
+      profile="intranet_interagi:default"
+      source="20230513002"
+      destination="20230522001"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona o indice de area"
+        import_steps="catalog"
+        />
+    <upgradeStep
+        title="Reindexa o tipo pessoa"
+        handler=".catalog.reindexa_pessoa"
+        />
+  </genericsetup:upgradeSteps>
+  
+  <genericsetup:upgradeSteps
+      profile="intranet_interagi:default"
+      source="20230522001"
+      destination="20230522002"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona busca por Area"
+        import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
+  
+  <genericsetup:upgradeSteps
+      profile="intranet_interagi:default"
+      source="20230522002"
+      destination="20230522003"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona o indice de predio"
+        import_steps="catalog"
+        />
+    <genericsetup:upgradeDepends
+        title="Adiciona busca por predio"
+        import_steps="plone.app.registry"
+        />
+    <upgradeStep
+        title="Reindexa os tipos pessoa e area"
+        handler=".catalog.reindexa_predio"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

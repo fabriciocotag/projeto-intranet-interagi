@@ -146,5 +146,7 @@ class TestArea:
                 email="areanova@plone.org",
                 ramal="2023",
             )
-            created_group = api.group.get( api.content.get_uuid(area) + '_editors' )
+            group_uuid = api.content.get_uuid(area)
+            group_name = f"{group_uuid}_editors"
+            created_group = api.group.get(group_name)
         assert created_group

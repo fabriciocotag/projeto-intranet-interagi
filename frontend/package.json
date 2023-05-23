@@ -24,11 +24,15 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "workspaces": [
+    "src/addons/intranet_interagi"
+  ],
   "addons": [
     "@eeacms/volto-accordion-block",
     "@kitconcept/volto-blocks-grid",
     "@kitconcept/volto-slider-block",
-    "@eeacms/volto-matomo"
+    "@eeacms/volto-matomo",
+    "intranet_interagi"
   ],
   "jest": {
     "modulePathIgnorePatterns": [

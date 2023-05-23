@@ -92,3 +92,4 @@ src/addons/*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+!src/addons/intranet_interagi
