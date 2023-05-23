@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Container from '@kitconcept/volto-light-theme/components/Atoms/Container/Container';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import { ShowBookmarksContentButton } from '@plone-collective/volto-bookmarks/components';
 
 import {
   Anontools,
@@ -36,6 +37,7 @@ const Header = (props) => {
 
             <div className="tools">
               {!token && <Anontools />}
+              {token && <ShowBookmarksContentButton />}
             </div>
           </div>
         </div>
