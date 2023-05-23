@@ -34,6 +34,7 @@
     "@eeacms/volto-matomo",
     "intranet_interagi"
   ],
+  "theme": "@kitconcept/volto-light-theme",
   "jest": {
     "modulePathIgnorePatterns": [
       "api"
