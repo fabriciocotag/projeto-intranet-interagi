@@ -1,16 +1,16 @@
 from intranet_interagi import _
 from plone import api
 from plone.dexterity.content import Container
-from zope import Schema as schema
+from zope import Schema
 from zope.interface import implementer
 
 
-class IArea(schema):
+class IArea(Schema):
     """Uma Area."""
 
     # Basic info
-    title = schema.TextLine(title=_("Nome da área"), required=True)
-    description = schema.Text(title=_("Sumário"), required=False)
+    title = Schema.TextLine(title=_("Nome da área"), required=True)
+    description = Schema.Text(title=_("Sumário"), required=False)
 
 
 @implementer(IArea)
