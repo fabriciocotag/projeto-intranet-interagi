@@ -20,4 +20,3 @@ def reindexa_predio(context):
         conteudo.reindexObject(idxs=["predio"])
         logger.info(f"- Reindexa o campo predio do objeto {conteudo.absolute_url()}")
     logger.info("Reindexação completa")
-

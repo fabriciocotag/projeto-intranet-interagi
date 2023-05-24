@@ -1,7 +1,7 @@
-from plone import api
 from intranet_interagi import logger
 from intranet_interagi.setuphandlers import content
 from intranet_interagi.setuphandlers import users
+from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 

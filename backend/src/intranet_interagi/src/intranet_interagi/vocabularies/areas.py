@@ -13,4 +13,3 @@ def areas_vocabulary(context):
     for brain in brains:
         terms.append(SimpleTerm(brain.UID, brain.UID, brain.Title))
     return SimpleVocabulary(terms)
-

@@ -3,7 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     >
 
-<genericsetup:upgradeSteps
+  <genericsetup:upgradeSteps
       profile="intranet_interagi:default"
       source="20230511002"
       destination="20230512001"
@@ -18,7 +18,7 @@
         />
   </genericsetup:upgradeSteps>
 
-<genericsetup:upgradeSteps
+  <genericsetup:upgradeSteps
       profile="intranet_interagi:default"
       source="20230512001"
       destination="20230512002"
@@ -58,7 +58,7 @@
         import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>
-  
+
   <genericsetup:upgradeSteps
       profile="intranet_interagi:default"
       source="20230513002"
@@ -73,7 +73,7 @@
         handler=".catalog.reindexa_pessoa"
         />
   </genericsetup:upgradeSteps>
-  
+
   <genericsetup:upgradeSteps
       profile="intranet_interagi:default"
       source="20230522001"
@@ -84,7 +84,7 @@
         import_steps="plone.app.registry"
         />
   </genericsetup:upgradeSteps>
-  
+
   <genericsetup:upgradeSteps
       profile="intranet_interagi:default"
       source="20230522002"
@@ -103,7 +103,7 @@
         handler=".catalog.reindexa_predio"
         />
   </genericsetup:upgradeSteps>
-  
+
   <genericsetup:upgradeSteps
       profile="intranet_interagi:default"
       source="20230522003"

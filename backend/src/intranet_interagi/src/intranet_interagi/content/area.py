@@ -1,13 +1,11 @@
 from intranet_interagi import _
 from plone import api
 from plone.dexterity.content import Container
-from plone.supermodel import model
-from plone.supermodel.model import Schema
-from zope import schema
+from zope import Schema as schema
 from zope.interface import implementer
 
 
-class IArea(Schema):
+class IArea(schema):
     """Uma Area."""
 
     # Basic info
@@ -24,4 +22,3 @@ class Area(Container):
         """Lista de pessoas conectadas a esta área."""
         relations = api.relation.get(target=self, relationship="area")
         return [i.from_object for i in relations]
-

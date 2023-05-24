@@ -31,4 +31,3 @@ class AreaJSONSerializer(SerializeFolderToJson):
             )
         )
         return result
-

@@ -1,8 +1,8 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
-	<subscriber
+  <subscriber
       for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
       handler=".login_handler.login"
       />
-    
+
 </configure>
