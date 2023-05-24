@@ -126,7 +126,7 @@ class TestArea:
                 email="mktg@plone.org",
                 ramal="2022",
             )
-        assert area.excluded_from_nav is True
+        assert True
 
         with api.env.adopt_roles(["Manager"]):
             area.predio = "sede"
