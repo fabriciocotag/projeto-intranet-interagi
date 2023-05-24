@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Container from '@kitconcept/volto-light-theme/components/Atoms/Container/Container';
-import { Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
 import { ShowBookmarksContentButton } from '@plone-collective/volto-bookmarks/components';
 
 import {
