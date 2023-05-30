@@ -1,0 +1,105 @@
+[
+    {
+        "_parent": "/",
+        "id": "time",
+        "@type": "Document",
+        "title": "Time",
+        "description": "Nossa Equipe",
+        "blocks": {
+            "170656f4-29c6-4420-b90f-bd2393d398fd": {
+                "@type": "search",
+                "facets": [
+                    {
+                        "@id": "af6cde4b-63bd-467d-982c-1e58a97b8382",
+                        "field": {
+                            "label": "Area",
+                            "value": "area"
+                        },
+                        "hidden": false,
+                        "multiple": false,
+                        "title": "Área",
+                        "type": "checkboxFacet"
+                    },
+                    {
+                        "@id": "09c01ffe-09de-45ae-b160-92e52b661cda",
+                        "field": {
+                            "label": "Predio",
+                            "value": "predio"
+                        },
+                        "hidden": false,
+                        "multiple": false,
+                        "title": "Prédio",
+                        "type": "checkboxFacet"
+                    }
+                ],
+                "facetsTitle": "Filtros",
+                "query": {
+                    "query": [
+                        {
+                            "i": "portal_type",
+                            "o": "plone.app.querystring.operation.selection.any",
+                            "v": [
+                                "Pessoa"
+                            ]
+                        },
+                        {
+                            "i": "path",
+                            "o": "plone.app.querystring.operation.string.absolutePath",
+                            "v": "/time/"
+                        }
+                    ],
+                    "sort_order": "ascending"
+                },
+                "showSearchInput": true,
+                "showTotalResults": true
+            },
+            "a10e3d32-d2b5-4442-923b-e1e5e720948c": {
+                "@type": "title"
+            },
+            "undefined": {
+                "@type": "search",
+                "listingBodyTemplate": "default",
+                "showSearchInput": true,
+                "showTotalResults": true
+            }
+        },
+        "blocks_layout": {
+            "items": [
+                "a10e3d32-d2b5-4442-923b-e1e5e720948c",
+                "170656f4-29c6-4420-b90f-bd2393d398fd"
+            ]
+        },
+        "language": "pt",
+        "subjects": [
+            "Time",
+            "RH"
+        ]
+    },
+    {
+        "_parent": "/",
+        "id": "ti",
+        "@type": "Area",
+        "title": "TI",
+        "description": "Tecnologia da Informação",
+        "email": "ti@plone.org",
+        "ramal": "1874"
+    },
+    {
+        "_parent": "/ti/",
+        "id": "desenvolvimento",
+        "@type": "Area",
+        "title": "Desenvolvimento",
+        "description": "Tecnologia da Informação: Time de Desenvolvimento",
+        "email": "dev@plone.org",
+        "ramal": "1337"
+    },
+    {
+        "_parent": "/",
+        "id": "marketing",
+        "@type": "Area",
+        "title": "Marketing",
+        "description": "Marketing",
+        "email": "mktg@plone.org",
+        "ramal": "3322"
+    }
+]

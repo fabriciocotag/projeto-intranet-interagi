@@ -1,0 +1,127 @@
+.component-cslider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  min-height: 600px;
+  align-items: flex-end;
+  background: rgba(50, 50, 50, 0.1);
+}
+
+.cslider-arrow-left {
+  display: flex;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  min-height: 70px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 265px;
+  margin-right: -70px;
+  background: linear-gradient(45deg, #803333, #344bef);
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px -5px black;
+  color: #eae8e8;
+  cursor: pointer;
+  font-size: 27px;
+  transform: translateX(-20px);
+}
+
+.cslider-arrow-right {
+  display: flex;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  min-height: 70px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 265px;
+  margin-left: -70px;
+  background: linear-gradient(45deg, #803333, #344bef);
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px -5px black;
+  color: #eae8e8;
+  cursor: pointer;
+  font-size: 27px;
+  transform: translateX(20px);
+}
+
+.cslider-edit {
+  flex-direction: column;
+  align-items: start;
+  padding: 70px 120px;
+  background: linear-gradient(0deg, #173a409e, #173a409e),
+    url(https://dpy2z8n9cxui1.cloudfront.net/V000324_Print-A-Wallpaper/fish-pattern-print-a-wallpaper-1.jpg?width=200);
+  background-position: center center;
+}
+
+.cslider-item {
+  display: flex;
+  min-width: 100%;
+  height: 600px;
+  align-items: flex-end;
+  padding: 70px 120px;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+.cslider-edit input {
+  padding: 7px 10px;
+  border: 1px solid lightgray;
+  border-radius: 9px;
+}
+
+.cslider-edit .cslider-title {
+  padding-bottom: 27px !important;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.cslider-new {
+  padding: 8px 26px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  background: #7fd27f;
+  border-radius: 8px;
+  color: white;
+}
+
+.cslider-delete {
+  width: 37px;
+  height: 37px;
+  border: none;
+  background: #e67e55;
+  border-radius: 50%;
+  color: #ece7e7;
+  font-size: 23px;
+}
+
+.cslider-form {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #c7c2c2;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.cslider-title,
+.cslider-subtitle {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.cslider-view .cslider-title {
+  color: white;
+}
+
+.cslider-view .cslider-subtitle {
+  color: rgb(234 227 227);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cslider-info {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
